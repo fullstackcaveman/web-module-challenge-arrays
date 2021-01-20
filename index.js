@@ -46,7 +46,8 @@ Use the copy function below to do the following:
 */
 
 function copy(originalFlavors) {
-	// return
+	const originalFlavorsCopy = [...originalFlavors];
+	return originalFlavorsCopy;
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
