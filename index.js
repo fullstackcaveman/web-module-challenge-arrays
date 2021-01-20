@@ -60,8 +60,8 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
-function is31Flavors(originalFlavorsCopy) {
-	if (originalFlavorsCopy.length === 31) {
+function is31Flavors(originalFlavors) {
+	if (originalFlavors.length === 31) {
 		return true;
 	} else {
 		return false;
@@ -80,9 +80,12 @@ Use the addFlavor function below to do the following:
     For example: addFlavor("Rainbow Sherbert", originalFlavors) should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-function addFlavor(originalFlavorsCopy) {
-	/*your code here*/
+function addFlavor(array, string) {
+	let addedFlavors = [...array];
+	addedFlavors.unshift(string);
+	return addedFlavors;
 }
+console.log(addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
