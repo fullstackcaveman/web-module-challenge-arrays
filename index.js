@@ -80,7 +80,7 @@ Use the addFlavor function below to do the following:
     For example: addFlavor("Rainbow Sherbert", originalFlavors) should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-function addFlavor(/*your code here*/) {
+function addFlavor(originalFlavorsCopy) {
 	/*your code here*/
 }
 
@@ -153,9 +153,16 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/) {
-	/*your code here*/
+function filterByWord(array, string) {
+	const filteredArray = [];
+	for (let i = 0; i < array.length; i++) {
+		if (array[i].includes(string)) {
+			filteredArray.push(array[i]);
+		}
+	}
+	return filteredArray;
 }
+console.log(filterByWord(originalFlavors, 'Chocolate'));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/
 
