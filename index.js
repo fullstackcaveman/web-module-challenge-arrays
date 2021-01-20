@@ -184,9 +184,7 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/) {
-	/*code here*/
-}
+function getAverageWordLength() {}
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
 Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors 
@@ -199,10 +197,6 @@ Use the getRandomFlavors function and new arrays below to do the following:
 
     For example: getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ["Strawberry Cheesecake", "Eggnog,"..."Chocolate"].
 */
-
-function getRandomFlavors(/*code here*/) {
-	/*code here*/
-}
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
 const newFlavors = [
@@ -284,6 +278,28 @@ const regionalFlavors = [
 	'Chocolate Chocolate Chip Cheesecake',
 	"Caramel 'n' Cookies",
 ];
+
+function getRandomFlavors(array1, array2, array3, array4) {
+	const combinedArray = [...array1, ...array2, ...array3, ...array4];
+
+	function randomizeArray(arr) {
+		let randomFlavors = [],
+			start;
+
+		for (var i = arr.length; i >= arr.length && i > 0; i--) {
+			start = Math.floor(Math.random() * arr.length);
+			randomFlavors.push(arr.splice(start, 1)[0]);
+		}
+
+		randomFlavors.splice(31, randomFlavors.length);
+
+		return randomFlavors;
+	}
+
+	console.log(randomizeArray(combinedArray));
+}
+
+getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors);
 
 /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
 function foo() {
